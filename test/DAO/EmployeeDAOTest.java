@@ -37,6 +37,7 @@ public class EmployeeDAOTest {
         salaries.add(new Salary(1, Date.valueOf("2016-12-19"), BigDecimal.valueOf(140.00)));
         salaries.add(new Salary(3, Date.valueOf("2017-1-18"), BigDecimal.valueOf(50.00)));
         salaries.add(new Salary(4, Date.valueOf("2017-1-21"), BigDecimal.valueOf(45.00)));
+        employeeDAO.insertEmployee(employee);
 
         Assert.assertEquals(employeeDAO.getEmployeeByID(KEY_ID), employee);
     }
